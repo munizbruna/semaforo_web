@@ -16,6 +16,7 @@ clientWeb.connect({
 const verde = document.getElementById("verde")
 const amarelo = document.getElementById("amarelo")
 const vermelho = document.getElementById("vermelho")
+const display = document.getElementById("display")
 
 function vermelhoOn() {
 vermelho.classList.add("vermelho")
