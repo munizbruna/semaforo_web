@@ -1,14 +1,14 @@
 //iot config
 let clientWeb = null
-const clientId = "Esp32" + Math.floor(Math.random()*900) +100
+const clientId = "Esp32" + Math.floor(Math.random() * 900) + 100
 clientWeb = new Paho.MQTT.Client("broker.hivemq.com", 8884, clientId);
 clientWeb.connect({
     timeout: 5,
-    useSSL:true, 
-    onSuccess: function(){
+    useSSL: true,
+    onSuccess: function () {
         alert("Conectado com sucesso!")
     },
-    onFailure: function(){
+    onFailure: function () {
         alert("A conexão falhou!")
     }
 })
@@ -19,14 +19,18 @@ const vermelho = document.getElementById("vermelho")
 const display = document.getElementById("display")
 
 function vermelhoOn() {
-vermelho.classList.add("vermelho")
+    vermelho.classList.add("vermelho")
+    //publish do topico
+    const msg = new Paho.MQTT.Message("")
+    msg.destinationName = "senai510/led/ligar"
+    clientWeb.send(msg)
 }
 function verdeOn() {
-verde.classList.add("verde")
+    verde.classList.add("verde")
 
 }
 function amareloOn() {
-amarelo.classList.add("amarelo")
+    amarelo.classList.add("amarelo")
 }
 
 function autoOn() {
