@@ -1,9 +1,11 @@
 //iot config
-const clientId = "Esp32" + Math.floor(Math.random()*900) +90
-let clientWeb = new Paho.MQTT.Client("broken.hivemq.com", 8884, clientId);
-clientWeb.connected({
+let clientWeb = null
+const clientId = "Esp32" + Math.floor(Math.random()*900) +100
+clientWeb = new Paho.MQTT.Client("broker.hivemq.com", 8884, clientId);
+clientWeb.connect({
+    timeout: 5,
     useSSL:true, 
-    onSucess: function(){
+    onSuccess: function(){
         alert("Conectado com sucesso!")
     },
     onFailure: function(){
