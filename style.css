@@ -21,6 +21,7 @@ h1{
 
 .semaforo{
     width: 16vw;
+    min-width: 100px;
     height: 50vh;
     padding: 16px 0;
     background-color: rgb(0, 0, 0);
