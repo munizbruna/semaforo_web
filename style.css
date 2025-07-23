@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     flex-direction: column;
@@ -11,10 +12,17 @@ h1{
     color: color-mix(in srgb, red 33%, yellow 33%, green 33%);
 
 }
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
 
 .semaforo{
-    width: 120px;
+    width: 16vw;
     height: 50vh;
+    padding: 16px 0;
     background-color: rgb(0, 0, 0);
     border-radius: 20px;
     display: flex;
@@ -25,13 +33,20 @@ h1{
     margin: 24px;
 }
 .led{   
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background-color: rgb(67, 67, 67);
 
 }
-
+.display{
+    width: 20vw;
+    height: 25vh;
+    padding: 16px 0;
+    margin: 24px;
+    background-color: gray;
+    border-radius: 8px;
+}
 .controles{
     width: 290px;
     display: flex;
@@ -46,26 +61,26 @@ button{
     border-radius: 8px;
     border: none;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    background-color: rgb(179, 179, 179);
+    
 }
-.vermelho:hover{
+button:active {
+  background-color: #28a745;
+  transform: scale(0.98);
+}
+.vermelho{
     background-color: red;
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
-    color: white;
-    font-weight: 600;
+
 }
-.amarelo:hover{
+.amarelo{
     background-color:yellow;
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.8);
-    color: rgb(0, 0, 0);
-    font-weight: 600;
+
 }
-.verde:hover{
+.verde{
     background-color:green;
-    box-shadow: 0 0 8px green;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
+
 }
-.auto:hover, .desligar:hover{
+button:hover{
     background-color:rgb(0, 0, 0);
     box-shadow: 0 0 8px rgb(0, 0, 0);
     color: rgb(255, 255, 255);

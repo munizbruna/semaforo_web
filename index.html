@@ -9,22 +9,26 @@
 </head>
 
 <body>
-    <h1>Semaforo Interativo</h1>
-
+    <h1>Semáforo Interativo</h1>
+<div class="section">
     <div class="semaforo">
         <div class="led" id="vermelho"> </div>
         <div class="led" id="amarelo"> </div>
         <div class="led" id="verde"> </div>
     </div>
 
+    <div class="display"></div>
+</div>
     <div class="controles" id="controles">
-        <button class="vermelho">Vermelho</button>
-        <button class="amarelo">Amarelo</button>
-        <button class="verde">Verde</button>
-        <button class="auto">Auto</button>
-        <button class="desligar">Desligar</button>
+        <button class="vermelho" onclick="vermelhoOn()">Vermelho</button>
+        <button class="amarelo" onclick="amareloOn()">Amarelo</button>
+        <button class="verde" onclick="verdeOn()">Verde</button>
+        <button class="auto" onclick="autoOn()">Auto</button>
+        <button class="desligar" onclick="Off()">Desligar</button>
     </div>
 
 </body>
+<script src="script.js"></script>
+<script src="mqttws31.js"></script>
 
 </html>
