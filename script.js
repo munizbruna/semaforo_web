@@ -26,6 +26,7 @@ function vermelhoOn() {
     clientWeb.send(msg)
 }
 function verdeOn() {
+    
     verde.classList.add("verde")
 
 }

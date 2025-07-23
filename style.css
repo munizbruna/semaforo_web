@@ -17,9 +17,11 @@ h1{
     align-items: center;
     justify-content: center;
     width: 50vw;
+    
 }
 
 .semaforo{
+
     width: 16vw;
     min-width: 150px;
     height: 50vh;
